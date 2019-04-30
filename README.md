@@ -76,7 +76,7 @@ You could change the config by the [mbed_app.json](./mbed_app.json) file in the 
 3. Compile the target binary. It will generate MK-PDMC.bin finally.
 
     ```sh
-    mbed compile -t GCC_ARM -m UNO_91H -n MK-PDMC
+    mbed compile -t GCC_ARM -m UNO_91H -N MK-PDMC
     ```
 
 <h2 id="Prov">Provision support. </h2>
