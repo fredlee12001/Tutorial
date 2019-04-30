@@ -61,18 +61,19 @@ You could change the config by the [mbed_app.json](./mbed_app.json) file in the 
     ```
     Modify the value accordingly to switch the mode.
 
-4. Preparing the code for PDMC. 
-   ```sh
-   cp .mbedignorePDMC .mbedignore
-   ```
+
 
 <h2 id="build">Build the binaries. </h2>
 
 
 1. By default, we use developer mode, following [Link](https://www.pelion.com/docs/device-management/current/connecting/provisioning-development-devices.html#creating-and-downloading-a-developer-certificate) to get your credential file. 
 
+2. Preparing the code for PDMC. 
+   ```sh
+   cp .mbedignorePDMC .mbedignore
+   ```
     
-2. Compile the target binary. It will generate MK-PDMC.bin finally.
+3. Compile the target binary. It will generate MK-PDMC.bin finally.
 
     ```sh
     mbed compile -t GCC_ARM -m UNO_91H -n MK-PDMC
@@ -83,14 +84,18 @@ You could change the config by the [mbed_app.json](./mbed_app.json) file in the 
 1.  Preparing the code for FCC.
 
 
+    ```sh
     cp .mbedignoreFCC .mbedignore
+    ```
 
 
 
 2.  Compile the binary.  It will generate MK-FCC.bin
 
 
+    ```sh
     mbed compile -t GCC_ARM -m UNO_91H --app-config=FCC_UNO91H_1M.json -DFCE_SERIAL_INTERFACE -N MK-FCC
+    ```
 
 
 3.  Following the standard provisioning process to do the factory provisioning. 
